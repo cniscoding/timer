@@ -5,11 +5,15 @@
 // process.stdout.write('\x07' + ' beep');
 
 const args = process.argv.slice(2);
-console.log(args)
-
-for (let num of args){
-  num = num*1000
-  setTimeout(() => {
-    process.stdout.write('\x07' + 'beep\n');
-  }, num);
-}
+if (process.argv.length >= 2) {
+  for (let num of args) {
+    if (num < 0 || num === isNaN() ) {
+      console.log('skip: negative number');
+    } else {
+      num = num * 1000;
+      setTimeout(() => {
+        process.stdout.write('\x07' + 'beep\n');
+      }, num);
+    }
+  }
+} 
