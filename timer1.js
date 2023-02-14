@@ -10,6 +10,6 @@ console.log(args)
 for (let num of args){
   num = num*1000
   setTimeout(() => {
-    process.stdout.write('\x07' + 'beep');
+    process.stdout.write('\x07' + 'beep\n');
   }, num);
 }
