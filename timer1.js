@@ -7,8 +7,7 @@
 const args = process.argv.slice(2);
 if (process.argv.length >= 2) {
   for (let num of args) {
-    if (num < 0 || num === isNaN() ) {
-      console.log('skip: negative number');
+    if (num < 0 || isNaN(num)) {
     } else {
       num = num * 1000;
       setTimeout(() => {
@@ -16,4 +15,4 @@ if (process.argv.length >= 2) {
       }, num);
     }
   }
-} 
+}
